@@ -1,0 +1,27 @@
+
+
+
+浏览器===>index.html===>main.js==>(vue.js,vue-router.js,App.vue)
+
+App.vue===>最大的组件（又叫做根组件），所有的组件都挂载在App.vue
+
+路由：HelloWorld.vue
+显示需要搭配<router-view />
+这个时候router-view 在哪里，helloworld内容就显示在哪里
+
+如果你想构建子组件，怎么写？
+
+1.在components内生成一个.vue结尾的文件 
+创建三部分内容
+template  
+script
+style ==>scoped保证当前样式只在当前组件生效
+
+2.引入组件至全局
+eg:
+2.1 引入
+import Home from '@/components/Home'
+2.2 声明当前组件
+components:{
+'Home':Home
+}
